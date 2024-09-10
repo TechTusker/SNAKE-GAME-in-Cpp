@@ -1,5 +1,6 @@
 # Snake Game Project Overview
 This project is a simple console-based implementation of the classic Snake Game. The game features a snake that grows in length every time it eats food and moves in the four cardinal directions: up, down, left, and right. The game continues until the snake collides with itself or the boundaries of the game area. The player's goal is to control the snake, eat as much food as possible, and maximize the score.
+![Alt text](snake.png)
 
 Game Essence
 Player Control: The player controls the snake's movement using the 'W', 'A', 'S', and 'D' keys for up, left, down, and right movements, respectively.
@@ -29,14 +30,12 @@ Collision Detection: The game checks if the head has collided with the body or t
 The game board provides the environment in which the snake moves and interacts with food.
 
 Dynamic Size:
-
 The size of the game board is determined dynamically based on the console window's dimensions. This ensures the game adapts to different screen sizes.
 Food:
-
 Food is represented as a Point object, similar to the snake's body parts. The food is randomly placed on the board, and when the snake eats it, a new piece of food is spawned.
 Score:
-
 The player's score is tracked by the Board class. Each time the snake eats food, the score increases by 1.
+
 3. Control Flow
 Game Loop:
 
@@ -52,6 +51,3 @@ Data Structure Advantages
 Array for Snake Body: The array structure used for the snake's body is simple and efficient. Since the snake grows one segment at a time, adding new segments to the array is a quick operation. As long as the snake doesn't exceed the maximum length, this solution works well for this game.
 
 Struct for Coordinates: Using the Point struct to encapsulate the coordinates allows for easy management of the snake's position and food location. It simplifies collision detection and movement logic by treating each body segment and food as individual points.
-
-Conclusion
-This Snake Game project efficiently leverages arrays and simple structs to manage the core mechanics of the game. By using fundamental data structures, the game is able to handle the snake's movement, detect collisions, and provide an interactive experience with minimal computational overhead. The dynamic sizing of the console window makes the game adaptable to various screen sizes, and the game's real-time input handling allows for smooth gameplay.
